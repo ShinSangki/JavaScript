@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>조건문</h1>
+    <p>if(조건식) { <br>
+        //실행문장1 <br>  
+    }else if(조건식) { <br>
+        \n//실행문장2 <br>
+    }else{ <br>
+        //실행문장3 <br>
+    }
+    </p><br><br><br>
+    <p>switch(조건문)</p>
+    <p>case문: 
+        <span id="switchMini">switch문에 있는 값과 비교 후 실행하는 구문</span><br>
+        <p id="switchp"> - 정수, 문자열, 논리타입의 값으로 구성</p>
+    </p>
+    <p>break문: 
+        <span id="switchMini"> 다른 case문으로 넘어가지 않도록 종료하는 구문</span><br>
+        <p id="switchp"> - 생략 가능</p>
+    </p>
+    <p>default문: 
+        <span id="switchMini">모든 case문이 일치하지 않은 경우에 동작하는 구문</span><br>
+        <p id="switchp">생략가능 ( = else문)</p>
+    </p>
+
+    <script>
+        //다중if 조건문
+        //if(true){ //첫번째에 참이기에 실행
+        //    console.log('참일경우 실행문장1');
+        //}else if(true){ //실행문1이 실행되어 실행X
+        //    console.log('거짓짓일경우 실행문장2');
+        //}
+
+        /* 내가 만들어본 코드
+        let num1 = console.log(prompt('첫 번째 숫자를 입력하세요!'));
+        let num2 = console.log(prompt('두 번째 숫자를 입력하세요!'));
+        if(num1 > num2){
+            console.log('첫 번째 입력한 값이 더 큰 수 입니다.');
+        }else if(num1 < num2){
+            console.log('두 번째 입력한 값이 더 큰 수 입니다.');
+        }else{
+            console.log('두 수는 같습니다.');
+        }
+        */
+        /* 영상에서 알려준 코드 
+        let num1 = parseInt(prompt('첫 번째 숫자를 입력하세요!'));
+        let num2 = parseInt(prompt('두 번째 숫자를 입력하세요!'));
+        console.log(num1, num2);
+        
+        if(num1 > num2){
+            console.log('첫 번째 입력한 값이 더 큰 수 입니다.');
+        }else if(num1 < num2){
+            console.log('두 번째 입력한 값이 더 큰 수 입니다.');
+        }else if(num1 === num2){
+            console.log('두 수는 같습니다.');
+        }*/
+
+
+
+
+
+    </script>
+</body>
+</html>

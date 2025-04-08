@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ALL_style.css">
+</head>
+<body>
+    <h1>대입연산자<span id="sp8_1">변수에 값을 초기화할 때 사용하는 기호</span></h1>
+    <p>let message = 'Hello'; -> =</p>
+    <p>복합대입연산자
+        let num = 5; //5라는 값을 변수 num에 저장
+        num += 2; //2라는 값을 변수 num에 재할당
+    </p>
+
+    <script>
+        //복합대입연산자
+        let num = 10;
+        // num = num + 7; : num에 7을 더한 결과를를 저장
+        num += 7;
+        console.log(num); //13
+        // num = num - 4; : num에 4를 뺀 결과를 저장
+        num -= 4;
+        console.log(num); //13
+        // num = num * 5; : num에 5를 곱한 결과를 저장
+        console.log(num*=5); //65
+        
+        
+    </script>
+</body>
+</html>

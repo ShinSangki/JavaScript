@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ALL_style.css">
+</head>
+<body>
+    <h1>연산자</h1>
+    <div id="big7">연산자란?
+        <span>연산을 위해 사용하는 기호(+, -, *, /)</span>
+        <p>연산자에도 우선순위가 존재</p>
+        <p>(++, --, !) -> (-, /, %) -> (< <= > >=) -> (==, ===, !=, !==) -></p>
+        <p>(&&) -> (||) -> (조건, ?, true, :, false) -> (=, +=, -=, *=, /=, %=)</p>
+        <span>우선순위를 높이기: ( )</span>
+    </div><br>
+    <div>산술연산자
+        <span>(+, -, *, /, %)</span>
+        <p>숫자 + 숫자 = 숫자형 데이터</p>
+        <p>숫자 + 문자 = 문자</p>
+
+    </div>
+    <div>증감연산자
+
+    </div>
+    <div>대입연산자
+
+    </div>
+    <div>비교연산자
+
+    </div>
+    <div>논리연산자
+
+    </div>
+    <div>조건연산자(삼항연산자)
+
+    </div>
+
+    <script>
+        //산술연산자
+        //숫자형 + 숫자형형
+        let num1 = 10;
+        let num2 = 5;
+        console.log(num1 + num2); //15
+        console.log(num1 - num2); //5
+        console.log(num1 * num2); //50
+        console.log(num1 / num2); //2
+        console.log(num1 % num2); //0
+        //문자열 + 문자열
+        let str1 = "안녕하세요,"
+        let str2 = "반갑습니다."
+        console.log(str1 + " " + str2); //안녕하세요 반갑습니다.
+        //나누기 연산: 실수형태의 결과를 표현
+        console.log(9/2); //4.5
+        //실수 -> 정수로 변환하기
+        console.log(parseInt(9/2)); //4
+        //논리형으로 전환(=== : 4일경우 true | 아닐경우 : fales)
+        console.log(parseInt(9/2) === 4); //true
+        console.log(parseInt(7/2) === 4); //false
+        
+        
+        
+    </script>
+</body>
+</html>

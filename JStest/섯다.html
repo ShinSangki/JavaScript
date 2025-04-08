@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>섯다 게임</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #cards, #bot-cards {
+      margin: 20px;
+    }
+    .card {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #000;
+      transition: transform 0.3s ease;
+    }
+    .card.reveal {
+      transform: scale(1.2);
+      background-color: #f0f8ff;
+    }
+    #bet-controls {
+      margin-top: 20px;
+    }
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>섯다: 1대1 봇 대전</h1>
+
+  <div id="status">턴: 플레이어</div>
+
+  <div id="cards"></div>
+  <div id="bot-cards"></div>
+
+  <div id="bet-controls">
+    <label for="bet">배팅 금액: </label>
+    <input type="number" id="bet" value="100" min="10" step="10">
+    <button onclick="playerTurn()">배팅하고 진행</button>
+  </div>
+
+  <p id="result"></p>
+
+  <script>
+    const deck = [];
+    for (let i = 1; i <= 10; i++) deck.push(i, i);
+
+    let playerCards = [], botCards = [];
+    let turn = 'player';
+
+    function shuffleDeck() {
+      const shuffled = [...deck];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function getHandName(card1, card2) {
+      const pair = [card1, card2].sort((a, b) => a - b).join('');
+      const specialHands = {
+        '13': '광땡', '18': '광땡', '38': '광땡',
+        '99': '구땡', '88': '팔땡', '77': '칠땡', '11': '일땡',
+        '12': '알리', '14': '독사', '19': '삥구',
+        '10': '장삥', '20': '장사', '17': '세륙',
+      };
+      if (specialHands[pair]) return specialHands[pair];
+      if (card1 === card2) return `${card1}땡`;
+      return `${(card1 + card2) % 10}끗`;
+    }
+
+    function compareHands(player, bot) {
+      const order = [
+        '38', '13', '18',
+        '1010', '99', '88', '77', '66', '55', '44', '33', '22', '11',
+        '12', '14', '17', '19', '10', '20',
+        '9', '8', '7', '6', '5', '4', '3', '2', '1', '0'
+      ];
+      const format = (c1, c2) => [c1, c2].sort((a, b) => a - b).join('');
+      const toKey = (c1, c2) => {
+        const key = format(c1, c2);
+        if (order.includes(key)) return key;
+        if (c1 === c2) return `${c1}${c2}`;
+        return ((c1 + c2) % 10).toString();
+      };
+      const pKey = toKey(player[0], player[1]);
+      const bKey = toKey(bot[0], bot[1]);
+      const pRank = order.indexOf(pKey);
+      const bRank = order.indexOf(bKey);
+      if (pRank < bRank) return '플레이어 승!';
+      if (pRank > bRank) return '봇 승!';
+      return '무승부!';
+    }
+
+    function revealCards() {
+      document.getElementById('cards').innerHTML =
+        `플레이어: ${playerCards.map(c => `<span class="card reveal">${c}</span>`).join('')}<br>(${getHandName(...playerCards)})`;
+      document.getElementById('bot-cards').innerHTML =
+        `봇: ${botCards.map(c => `<span class="card reveal">${c}</span>`).join('')}<br>(${getHandName(...botCards)})`;
+      document.getElementById('result').innerText = compareHands(playerCards, botCards);
+    }
+
+    function playerTurn() {
+      if (turn !== 'player') return;
+
+      const shuffled = shuffleDeck();
+      playerCards = [shuffled.pop(), shuffled.pop()];
+      botCards = [shuffled.pop(), shuffled.pop()];
+
+      document.getElementById('status').innerText = '턴: 봇';
+      document.getElementById('cards').innerHTML =
+        `플레이어: ${playerCards.map(c => `<span class="card">?</span>`).join('')}`;
+      document.getElementById('bot-cards').innerHTML =
+        `봇: ${botCards.map(c => `<span class="card">?</span>`).join('')}`;
+
+      turn = 'bot';
+      setTimeout(() => {
+        revealCards();
+        document.getElementById('status').innerText = '턴 종료';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

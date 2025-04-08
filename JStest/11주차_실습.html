@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //모든 오렌지를 담을 수 있는 박스의 총 수를 구하시오.
+        let box = parseInt(prompt('한 박스에 담을 오렌지수를 입력하세요!'));
+        let ora = parseInt(prompt('현재 오렌지의 개수를 입력해주세요!'));
+        console.log(box, ora);
+        
+        let ned = ora%box === 0 ? ora/box : parseInt(ora/box) + 1 ;
+        console.log(`필요한 상자의 수: ${ned}`);
+        
+    </script>
+</body>
+</html>

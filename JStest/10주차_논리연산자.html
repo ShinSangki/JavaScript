@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ALL_style.css">
+</head>
+<body>
+    <h1>논리연산자<span id="sp8_1">주어진 논리식을 판단,T or F로 반환</span></h1>
+    <div>!(NOT)
+        <p>!논리</p>
+        <p>논리값을 뒤집는 연산자</p>
+        <p>a:T -> not a:F</p>
+        <p>a:F -> not a:T</p>
+    </div>
+    <div>&&(AND), ||(OR)
+        <p>논리&&논리</p>
+        <p>두 논리가 모두 T일때 T</p>
+        <p>
+            <span id="p10_F">F+F=F</span>
+            <span id="p10_F">F+T=F</span>
+            <span id="p10_F">T+F=F</span>
+            <span id="p10_T">T+T=T</span>
+        </p>
+        <p>논리||논리</p>
+        <p>두 논리중 하나라도 T일때때</p>
+        <p>
+            <span id="p10_F">F+F=F</span>
+            <span id="p10_T">F+T=T</span>
+            <span id="p10_T">T+F=T</span>
+            <span id="p10_T">T+T=T</span>
+        </p>
+    </div>
+    <script>
+        //!(NOT)
+        let a1 = 5;
+        let a2 = 7;
+        console.log(!(a1 < a2)); //T -> F
+        console.log(!(a1 === a2)); //F -> T
+        
+        //&&(AND)
+        console.log( 3 > 2 && 15 < 10 ); //T + F = F
+        console.log( 3 < 2 && 15 > 10 ); //F + T = F
+        console.log('모두T이면 T '+ (3 > 2 && 15 > 10 )); //T + T = T
+
+        //||(OR)
+        console.log( 9 > 5 || 17 < 10 ); //T + F = F
+        console.log( 9 < 5 || 17 > 10 ); //F + T = F
+        console.log('모두F이면 F '+ (9 < 5 || 17 < 10 )); //F + F = F
+        let a3 = 5;
+        console.log(a1 !== a3 || a2 > a3); //F + T = T
+        
+        
+
+    </script>
+</body>
+</html>

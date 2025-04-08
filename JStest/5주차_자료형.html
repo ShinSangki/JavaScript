@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="JS6.css">
+</head>
+<body>
+    <h1>자료형 (Data Type)</h1><br>
+    <div>숫자형(number)
+        <span>숫자데이터 10을 변수 num에 저장</span>
+        <p>let num1 = 10;</p>
+        <p>let num3 = 3.14;</p>
+    </div><br>
+
+    <div>문자열(string)
+        <span>("")or('')사용</span>
+        <p>let str1 = "Hello JavaSeript</p>
+        <p>let str2 = 'happy Hacking!'</p>
+    </div><br>
+
+    <div>논리형(boolean)
+        <span>T or F로</span>
+        <p>let isLogin = true;</p>
+        <p>let isState = false;</p>
+    </div><br>
+
+    <div>자료형 - undefined, null
+        <span>null: 값X, undefiend: 자료형, 값X</span>
+        <p>let isNull = null;</p>
+        <p>let empty;</p>
+    </div><br>
+
+    <div>배열(Array)
+        <span>'[]'로 표현</span>
+        <p>let array = [];//빈 배열 생성</p>
+        <p>let array2 = [1,2,3];</p>
+    </div><br>
+
+    <div>객체(object)
+        <span>여러 자료형 데이터를 하나로 묶어 표현</span>
+        <p>let obj = {name:'신상기', age:20};</p>
+    </div><br>
+    
+    <script>
+        //자료형(Date Type)
+        //숫자형(number) - 5000;
+        //문자열 - "안녕";, '123';
+        //논리형 - "T";or"F";
+        //undefined(지정X) - unData;
+        //null(값이 유효X) - null;
+
+        //참조 자료형
+        //object(속성+함수함께) - new Date();
+        //array(1변수=n값) - ['봄','여름','가을','겨울']
+
+
+        //숫자형(number)
+        //숫자데이터 10을 변수 num1에 저장하겠다!
+        let num1 = 10;
+        let num2 = 30;
+        let num3 = 3.14;
+        let num4 = 6.25;
+
+        console.log(num1,num2,num3,num1,num4);
+        
+
+        //문자열(string) ""or '' 사용
+        let str1 = "Hello JavaScript";
+        let str2 = 'Happy Hacking!';
+        let str3 = '돈가스 먹고싶다';
+
+        console.log(str1, str2, str3);
+        
+
+        //논리형(Boolean) T or F
+        let isLogin = true;
+        let isState = false;
+
+        console.log(isLogin, isState);
+
+
+        //자료형 - undefined, null
+        //undefiend: 데이터의 자료형, 값 모두 없는 경우에 표현
+        //null: 자료형을 객체로 표현을 하지만 값은 비어있는 상태로 표현
+        let isNull = null;
+        let empty;
+
+        console.log(isNull, empty);
+        console.log(typeof(isNull), typeof(empty));
+        //undefined가 뜰 경우 자료가 잘 넘어가지 않았음을 확인 가능.
+        
+
+        //배열(Array)
+        // - 여러 개위 데이터를 하나의 공간에 저장하는 형태
+        // - '[]'로 표현
+        let array = [];//빈 배열 생성
+        let array2 = [1,2,3];//데이터가 있는 배열 생성
+
+        console.log(array, array2);
+
+
+        //객체(object)
+        // - 여러 자료형 데이터를 하나로 묶어 표현
+        let obj = {name:'신상기', age:20};
+
+        console.log(obj);
+        
+        
+    </script>
+</body>
+</html>

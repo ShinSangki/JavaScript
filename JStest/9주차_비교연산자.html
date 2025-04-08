@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ALL_style.css">
+</head>
+<body>
+    <h1>비교연산자<span id="sp8_1"></span>피연산자 사이의 크기를 판단해 T 또는 F를 반환</h1>
+    <div>비교연산자 활용
+
+        <p>a == b : a와b는 같음</p>
+        <p>a != b : a와b는 같지 않음</p>
+
+        <p>a === b : a와b는 같음</p>
+        <p>a !== b : a와b는 같지 않음</p>
+
+        <p>a > b : a가b보다 큼</p>
+        <p>a >= b : a가b보다 크거나 같음</p>
+
+        <p>a < b : a가b보다 작음</p>
+        <p>a <= b :a가b보다 작거나 같음</p>
+        <span>(=, >, <)연산자의 끝에 '='이 붙으면 숫자형이 아닐경우 F</span>
+        <span>JavaScript에서는 일치 연산자를 사용</span>
+    </div>
+
+    <script>
+        //비교연산자
+        let num1 = 3;
+        let num2 = 7;
+        console.log('num1이 num2보다 큰 수인가? '+(num1 > num2)); //f
+        console.log('num1이 num2보다 작은 수인가? '+(num1 < num2)); //t
+
+        console.log('num1과 num2는 같은 수인가? '+(num1 == num2));
+        console.log('num1과 num2는 같은 수인가? '+(num1 === num2));
+        //'==' vs '==='
+        let num3 = '7';
+        // -'==': 동등연산자
+        // - 두 개의 피연산자값이 같은지 비교
+        // - 둘 중 하나의 값이 다른 자료형이면 숫자형으로 자동 변환.
+        console.log('num2와 num3의 자료형에 관련없이 값이 같은가? '+(num2 == num3));
+        // -'===': 일치연산자
+        // - 두 개의 피 연산자의 자료형과 값이 같은지 비교
+        // - 둘 중 하나의 값이 다른 자료형이면 F를 출력.
+        console.log('num2와 num3의 자료형과 값이 같은가? '+(num2 === num3));
+    </script>
+
+    <script>
+        //9주차 실습
+        let nu1 = 10;
+        let nu2 = 5;
+        let nu3 = '5';
+        let str1 = 'Hello';
+        let str2 = 'World';
+
+        // nu1이 nu2보다 큰 수인지 비교
+        console.log(nu1 > nu2);
+
+        // nu2와 nu3가 서로 다른 수인지 비교
+        console.log(nu2 != nu3); //F: nu3가 숫자형으로 바뀌면서 두 값과 자료형이 같아짐.
+        console.log(nu2 !== nu3); //T: 숫자형nu2와 문자열nu3는 자료형이 다르므로 서로 다름.
+
+        // nu3가 nu1보다 작은 수인지 비교
+        console.log(parseInt(nu3) < nu1);
+        
+        // str1과 str2가 서로 다른 문자열인지 비교
+        console.log(str1 === str2);
+        
+    </script>
+</body>
+</html>
