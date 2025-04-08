@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 'Hello JavaScript!' 문장을 10번 출력하세요!
+        /* 무지성 반복의 문제점: 횟수가 많아질수록 힘들어짐...
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        console.log('Hello JavaScript!');
+        */
+
+        /* 무한 반복문
+        while(true){
+            console.log('hello JS!');
+        } */ //루프됨...
+
+        /* 10회 반복문
+        let num = 0;
+        while(num < 10){ //num의 값이 10 이하가 될때까지 반복복
+            console.log('Hello JS!'); //'Hello JS! 출력'
+            num += 1; //num을 1씩 증가
+        } */
+
+        /* 숫자를 n부터 1까지 출력
+        let n = parseInt(prompt('정수 입력'));
+        while(n > 0){
+            console.log(n);
+            n -= 1;
+        } */
+
+        /* 숫자를 1부터 n까지 출력
+        let n = parseInt(prompt('정수 입력'));
+        let num = 1;
+        while(num <= n){
+            console.log(num);
+            num += 1;
+        } */
+
+        /* break문을 이용해 0~9까지 출력후 종료.
+        let num = 0;
+        while(true){
+            console.log(num);
+            num += 1;
+
+            if(num === 10){
+                console.log('프로그램 종료.');
+                break;
+            }
+        } */
+
+        /* 입력한 숫자를 더하는 프로그램(단, '0'을 입력시 종료)
+        let num = 0;
+        while(true){
+            let n = console.log('더한 결과' + parseInt(prompt('숫자를 입력해 주세요')));
+            num += n;
+            
+            if(n === 0) {
+                console.log('프로그램을 종료합니다.');
+                break;
+            }
+        } */ 
+        //루프되는 이유: n에 할당되는 값이 입력된 숫자 뿐만 아니라 
+        // '더한 결과'까지 포함되어 n = undefined 가 되어 break가 작동되지 않음.
+
+        /*강의 코드
+        let sum = 0;
+
+        while(true){
+            let num = parseInt(prompt('숫자 입력:'));
+            sum += num;
+            console.log(`더한 결과: ${sum}`);
+            
+
+            if(num === 0){
+                console.log('프로그램을 종료.');
+                break;
+                
+            }
+        } */
+        
+
+
+
+        
+    </script>
+    <h1>반복문</h1>
+    <div>반복문의 종류<br>
+        <span>while문: 반복 횟수 정해지지X</span><br>
+        <span>do~while문: 반복 횟수 정해지지X</span><br>
+        <span>for문: 반복 횟수가 정해짐짐</span>
+    </div>
+    <div>while문
+        <p>>>> while(true) {<br>
+            >>> //실행문장<br>
+            >>> }
+        </p>
+    </div>
+    <div>break문
+        <span>반복문을 빠져나가는 구문</span><br>
+        <p>>>> while(true) {<br>
+            >>> //실행문장<br>
+            >>> }
+        </p>
+    </div>
+</body>
+</html>

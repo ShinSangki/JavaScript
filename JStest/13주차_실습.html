@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //내가 작성해본 if문 코드드
+        let kor = parseInt(prompt('국어 점수를 입력하세요'));
+        let eng = parseInt(prompt('영어 점수를 입력하세요'));
+        let mat = parseInt(prompt('수학 점수를 입력하세요'));
+
+        /*
+        let average = parseInt((kor + eng + mat)/3);
+        console.log(parseInt(average));
+        
+        if(average < 0 || average > 100){
+            console.log(`${average}는 불가능한 점수 입니다.`);
+        }else if(average > 95){
+            console.log(`당신의 평균은 ${average}이고 A+학점입니다.`);
+        }else if(average >= 90){
+            console.log(`당신의 평균은 ${average}이고 A학점입니다.`);
+        }else if(average >= 85){
+            console.log(`당신의 평균은 ${average}이고 B+학점입니다.`);
+        }else if(average >= 80){
+            console.log(`당신의 평균은 ${average}이고 B학점입니다.`);
+        }else if(average >= 75){
+            console.log(`당신의 평균은 ${average}이고 C+학점입니다.`);
+        }else if(average >= 70){
+            console.log(`당신의 평균은 ${average}이고 C학점입니다.`);
+        }else if(average >= 65){
+            console.log(`당신의 평균은 ${average}이고 D+학점입니다.`);
+        }else if(average >= 60){
+            console.log(`당신의 평균은 ${average}이고 D학점입니다.`);
+        }else if(average <60){
+            console.log(`당신의 평균은 ${average}이고 F학점입니다.`);
+        }
+        */
+
+        //강의 코드
+        let total = kor+eng+mat;
+        let avg = total/3;
+        let grade = 'F';
+
+        //학점의 범위 100~95: a+ | 95~90: a ....
+        if(avg >= 95 && avg <= 100){
+            grade = 'A+';
+        }else if(avg >=90 && avg <95){
+            grade = 'A';
+        }else if(avg >=85 && avg <90){
+            grade = 'B+';
+        }else if(avg >=80 && avg <85){
+            grade = 'B';
+        }else if(avg >=75 && avg <80){
+            grade = 'C+';
+        }else if(avg >=70 && avg <75){
+            grade = 'C';
+        }else if(avg >=65 && avg <70){
+            grade = 'D+';
+        }else if(avg >=60 && avg <65){
+            grade = 'D';
+        }
+
+        console.log(`당신의 평균은${avg}이고 ${grade}학점입니다.`);
+        
+
+    </script>
+</body>
+</html>

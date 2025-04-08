@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*손코딩, 디버깅, 코드가 동작하는 순서를 직접 손으로 작성해서 확인.
+1   true    1
+2   true    2
+3   true    3
+4   false   출력X  */
+//do~while문으로 (1~3까지 출력)
+        /* let num= 1;
+        do{
+            console.log(num);
+            num += 1;
+        }while(num <= 3) */ //거짓일 경우 종료 혹은 다음으로.
+
+        
+//for문 다루기 (1~3까지 출력)
+// >>> for(초기화; 조건식; 작업 후 처리){
+// >>>     실행문장
+// >>> }
+
+        /* for(let i=1; i<=3; i++){
+            console.log(i);
+        } */
+
+//1부터 100까지 출력하는 프로그램 (for문)
+        /* for(let i=1; i<=100; i++){
+            console.log(i);
+        } */
+
+
+//continue문 
+        // - 특정 조건이 충족되면 나머지 부분 건너뜀
+        //1부터 10까지 홀수만 출력
+        /* for (let i =0; i < 10; i++) {
+            if (i % 2 === 0){ //짝수일 경우
+                continue; //이후 코드를 생략하고 다시
+            }
+            console.log(i);
+            
+        } */
+
+//1~10까지 출력하는 반복문에서 3의 배수 제외하기
+        /* for (let i = 1; i <= 10; i++){
+            if (i % 3 ===0){
+                continue;
+            }
+            console.log(i);
+            
+        } */
+
+// continue문 & break문 언제 사용?
+// - 코드의 흐름을 제어하여 유연하게
+// - 특정 조건에 따라 반복문 실행을 제어할때
+// - 불필요한 코드 실행 건너뛸때
+// - 코드의 가독성과 효율을 증가시킬때
+        
+
+// 1~20까지 숫자중 홀/짝의 합과 숫자들이 각각 출력 되도록 구현
+        let even = 0; //짝
+        let odd = 0; //홀
+        let even1 = '';
+        let odd1 = '';
+
+        for(let i = 1; i <= 20; i++) {
+            if (i % 2 === 0){
+                even += i;
+                //even1.push(`${even} `)
+                even1 += i + ' '; // 띄워쓰기: + '공백';
+            }else {
+                odd += i;
+                //odd1.push(`${odd} `) 왜 안되는지는 이후 확인 필요
+                odd1 += i + ' '; // 띄워쓰기: + '공백';
+                continue;
+            }
+        }
+        console.log(`${even1}의 합: ${even}`);
+        console.log(`${odd1}의 합: ${odd}`);
+        
+        
+
+    </script>
+</body>
+</html>

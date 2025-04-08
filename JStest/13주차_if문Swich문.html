@@ -8,22 +8,25 @@
 </head>
 <body>
     <h1>조건문</h1>
+    <p>if(조건문) <span id="switchp">여러가지 조건식을 구성</span></p>
+    <p>다중 if문 필요 예: - 10>5 & 6>2 & 3>1</p>
     <p>if(조건식) { <br>
         //실행문장1 <br>  
     }else if(조건식) { <br>
-        \n//실행문장2 <br>
+        \n//실행문장2 <br>5
+
     }else{ <br>
         //실행문장3 <br>
     }
     </p><br><br><br>
-    <p>switch(조건문)</p>
+    <p>switch(조건문)<span id="switchp">여러가지 연속된 값을 비교</span></p>
     <p>case문: 
         <span id="switchMini">switch문에 있는 값과 비교 후 실행하는 구문</span><br>
         <p id="switchp"> - 정수, 문자열, 논리타입의 값으로 구성</p>
     </p>
     <p>break문: 
         <span id="switchMini"> 다른 case문으로 넘어가지 않도록 종료하는 구문</span><br>
-        <p id="switchp"> - 생략 가능</p>
+        <p id="switchp"> - 경우에 따라 생략 가능</p>
     </p>
     <p>default문: 
         <span id="switchMini">모든 case문이 일치하지 않은 경우에 동작하는 구문</span><br>
@@ -62,9 +65,51 @@
             console.log('두 수는 같습니다.');
         }*/
 
+        /*
+        let num = 3;
+
+        switch(num%2){
+            case 0:
+                console.log('짝수!');
+                break; //없으면 다음 과정도 체크하게 됨.
+            case 1:
+                console.log('홀수!');
+                break;
+            default:
+                console.log('숫자가 아니다!');
+                
+                break;
+        }*/
 
 
+        let num = parseInt(prompt('12개월중 좋아하는 달은 골라주세요'));
 
+        switch(num){
+            case 3:
+            case 4:
+            case 5:
+                console.log(`${num}월은(는) 봄!`);
+                break;
+            case 6:
+            case 7:
+            case 8:
+                console.log(`${num}월은(는) 여름!`);
+                break;
+            case 9:
+            case 10:
+            case 11:
+                console.log(`${num}월은(는) 가을!`);
+                break;
+            
+            case 12:
+            case 1:
+            case 2:
+                console.log(`${num}월은(는) 겨울!`);
+                break;
+            default:
+                console.log(`${num}월은 12개월에 포함되지 않습니다!`);
+                
+        }
 
     </script>
 </body>
