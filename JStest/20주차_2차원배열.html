@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 2차원 배열 : 배열 내 요소를 배열 타입으로 저장하는 자료구조
+// 생성 방법: >>> let array = [[1,2,3, ..],[a,b,c, ..],[가,나,다,..], ..];
+// 3*3 구조의 2차원 배열: >>> let array = [[1,2,3],[4,5,6],[7,8,9]];
+    // 생성
+        let array = [[1,2,3],[4,5,6],[7,8,9]];
+        console.log(array);
+    //1. array배열 내 첫 번째 요소 접근후 출력
+        console.log(array[0]);
+
+    //2. array배열 내 두번째 요소 안에 있는 '4'를 출력
+        console.log(parseInt(array[1][0])); //paresInt: 없어도 가능
+        
+    //3. array배열 내 세번째 요소 안에 있는 '9'를 출력
+        console.log(array[2][2]);
+
+    //4. array배열 내 3과 8을 더한 후 출력
+    console.log(array[0][2]+array[2][1]);
+    
+    </script>
+</body>
+</html>

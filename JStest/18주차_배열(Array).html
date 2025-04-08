@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//배열? (Array)
+
+//수많은 데이터를 하나의 변수에 저장할 수 있는 자료구조
+//['요소1', '요소2', '요소3', .... '요소n '] 요소: item, element(엘리먼트트)라고도 부름.
+//해당 배열에 있는 item에 접근하기 위한 구분자: index
+
+// - 특징1: 타입이 고정X [1, true, 'hello', object] / 타입별로 모아 사용하는것이 용이하다.
+
+// - 특징2: 데이터를 추가할 때 공간이 할당됨
+// >>> let array = [];
+// >>> array[0] = 1; // [1]
+// >>> array[1] = 2; // [1,2]..... >>> array[n] = m; // [1,2,3 .... m]
+
+// - 특징3: 배열은 반드시 생성 후 접근이 가능하며, index를 활용한다.
+// >>> let arr;
+// >>> arr[2] = 3; // 불가능: arr은 undfined 타입으로 인식.
+
+//배열 생성 : 배열의 값과 갯수가 정해져 있을 경우
+// >>> let array = [1,2,3,4,5];
+
+//빈 배열 생성 : 값과 갯수가 정해져 있지 않은 경우
+// >>> let array = [];
+
+
+
+// 1. 배열 생성 연습
+        let array = [];
+
+
+// 2. 배열 내 데이터 추가방법 2가지
+    // 2-1. index 활용: 원하는 위치에 추가가
+        array[0] = 1;
+        array[1] = 2;
+    
+    // 2-2. push() 활용: 뒤에서 부터 추가
+        array.push(3);
+        array.push(4);
+
+
+// 3. 배열 내 데이터 접근
+    // 3-1. index 활용: 하나씩 접근 가능
+        // console.log(array[0], array[1], array[2], array[3]);
+        // 가로로 '1 2 3 4'
+
+
+    // 3-2. array 내 일부 데이터 출력 (for문)
+    // - 배열 내 요소에 특정 작업을 해야 할 경우
+        /* for(let i=1; i<3; i++){
+            console.log(array[i]);
+        } */ // 세로로 '1 2 3 4'
+
+        /* for(let i=0; i<array.length; i++){ // .length: 속성
+            console.log(array[i]);
+        } */
+
+    // 3-3. 반복문 없이 array 내 모든 데이터 출력
+    // - 단순히 배열 내 데이터만 조회할 경우
+    // - index, 배열 내 데이터 개수(length)
+        // console.log(array);
+
+
+// 4. 배열 내 데이터 수정방법 - 인덱스
+        array[2] = 7; // 7이라는 값을 array라는 배열의 index2 자리에 재할당.
+        //console.log(array); // '1 2 7 4'
+
+
+// 5. 배열 내 데이터 삭제
+        arr5 = [1,2,3,4,5,6,7];
+    // 5-1. pop() 활용: 배열 내 가장 뒤에있는 item 삭제
+        // arr5.pop();
+        // console.log(arr5);
+    
+    // 5-2. splice(인덱스, 삭제할 개수) 활용
+    //index: 삭제할 데이터의 위치
+    //삭제할 개수: 해당 index 위치로부터 뒤로 삭제할 개수
+        // arr5.splice(3, 2);
+        // console.log(arr5);
+        
+    </script>
+</body> 
+</html>

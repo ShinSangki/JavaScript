@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//배열함수 
+    // 1. 배열.includes(찾고싶은 item)
+    /*    let arr1 = [1,2,3,4,5,6,7,8,9,10];
+    //arr1배열 내 3이라는 데이터가 있는지 확인
+        console.log(arr1.includes(3)); //true 출력
+    //arr1배열 내 15라는 데이터가 있는지 확인
+        console.log(arr1.includes(15)); //false
+    
+    
+    // 2. 배열.indexOf(찾고싶은 item)
+        let arr2 = [1,2,3,4,5,6,7,8,9,10];
+    //arr2배열 내 4라는 데이터의 위치(index)를 반환
+        console.log('4의 위치: '+ arr2.indexOf(4)); //3 출력
+    //arr2배열 내 없는 데이터의 위치(index)값값 반환
+        console.log('15의 위치: '+ arr2.indexOf(15)); // -1출력
+    
+    
+    // 3. 배열.slice(시작index, 끝index) || 끝 index의 -1 까지 접근
+        let arr3 = [1,2,3,4,5,6,7,8,9,10];
+    //arr3배열 내 데이터2~4까지만 출력
+        console.log(arr3.slice(1, 4)); // 2, 3, 4 출력
+    //arr3배열 내 데이터4~7까지만 출력
+        console.log(arr3.slice(3, 7)); // 4, 5, 6, 7 출력
+    //arr3배열 내 데이터5 뒤로 모두 출력
+        console.log(arr3.slice(4)); // 5, 6, 7, ... 10 출력
+        */
+        
+//예제1: 과일의 이름을 저장하는 fruits배열을 생성하시오.
+        let fruits = [
+            "apple","avocado","banana","blueberry","cherry","dragon freits",
+            "fig","graps","kiwi","lime","mango","orange","oriental melon","pear",
+            "peach","pine apple","shine muscat","strawberry",,"tomato",
+            "water melon","yuja"];
+    //1. fruits의 마지막 아이템인 "yuja" 삭제
+        fruits.pop();
+        console.log(fruits);
+    //2. fruits에 "grapefruit" 추가하기
+        fruits.push("grapefruit");
+        console.log(fruits.includes("grapefruit"));
+    //3. fruits에 "cherry tomato","pine nut","korean blackberry" 추가하기
+        fruits.push("cherry tomato","pine nut","korean blackberry");
+        console.log(fruits.includes("cherry tomato","pine nut","korean blackberry"));
+    //4.fruits에 "orange"가 있는지 확인
+        console.log(fruits.includes("orange"));
+    //5.fruits에 "kiwi"가 있는지 확인
+        console.log(fruits.includes("kiwi"));
+    </script>
+</body>
+</html>
