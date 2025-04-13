@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>//전역변수 VS 지역변수 범위
+        var num = 10; // 13이라는 값을 num이라는 변수에 전역변수로 할당
+        function scape(){
+            console.log(num); // 변수 num을 scape함수 안에서 호출
+            var num2 = 5; // 5라는 값을 num2라는 변수에 지역변수로 할당
+            console.log(num2);// 변수 num2를 scape함수 안에서 호출
+        }
+        scape();
+        console.log(num2); //scape함수 안에서 선언한 변수 num2를 밖에서 호출
+    </script>
+
+    <script>// var VS let VS const 범위
+        //var: 함수 내 선언: 함수 내 어디서든
+        function FuncBlockScope(){
+            var msg = "Hello";
+            console.log(msg);
+
+            if(true){
+                var msg2 = "world!";
+            }
+            console.log(msg2);
+        }
+        FuncBlockScope();
+        console.log(msg);
+        
+    </script>
+    <span>아 빨리 집에 가고싶다</span>
+</body>
+</html>
